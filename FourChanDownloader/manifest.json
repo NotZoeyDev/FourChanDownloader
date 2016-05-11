@@ -1,0 +1,26 @@
+
+{
+  "manifest_version": 2,
+
+  "name": "FourChanDownloader",
+  "description": "Download everything from an 4chan board or thread.",
+  "version": "2.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://boards.4chan.org/*", "*://boards.4channel.org/*"],
+      "js": ["app.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "scripts": [
+        "background.js" ]
+  },
+  "permissions": [
+    "downloads" 
+  ]
+}
